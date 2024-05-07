@@ -16,7 +16,7 @@ Example current page is on `/product?page=2&search=meatball`. Then this would re
 </div>
 ```
 
-Another example if current page is on `/product?page=2&search=meatball`. Then this would return `/product?page=3&search=friedchicken`
+Another example if current page is on `/product?page=2&search=meatball`. Then this would return `/product?page=2&search=friedchicken`
 
 ```html
 <form hx-ext="path-params" hx-get="/product?page=2&search=meatball">
