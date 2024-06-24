@@ -1,7 +1,6 @@
 htmx.defineExtension("replace-params", {
     onEvent: (name, evt) => {
         if (name === "htmx:configRequest") {
-            console.log("event", evt.detail.parameters)
             const path = evt.detail.path.split("?")[0];
             const params = evt.detail.path.split("?")[1] || "";
             const searchParams = new URLSearchParams(params);
@@ -14,7 +13,6 @@ htmx.defineExtension("replace-params", {
                 delete evt.detail.parameters[key];
             }
             evt.detail.path = `${path}?${searchParams.toString()}`;
-            console.log(evt.detail.path)
         }
     },
 });

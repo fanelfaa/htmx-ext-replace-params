@@ -12,7 +12,7 @@ Example current page is on `/product?page=2&search=meatball`. Then this would re
 
 ```html
 <div hx-ext="path-params">
-    <a hx-get="/product?page=2&search=meatball" hx-vals='{"page": "3"}'>Next</div>
+  <a hx-get="/product?page=2&search=meatball" hx-vals='{"page": "3"}'>Next</a>
 </div>
 ```
 
