@@ -5,7 +5,8 @@ htmx.defineExtension("replace-params", {
             const params = evt.detail.path.split("?")[1] || "";
             const searchParams = new URLSearchParams(params);
             for (const key in evt.detail.parameters) {
-                if (!Object.prototype.hasOwnProperty.call(evt.detail.parameters, key)) {
+                if (!Object.prototype.hasOwnProperty.call(evt.detail.parameters, key) ||
+                    typeof evt.detail.parameters[key] === "function") {
                     continue;
                 }
                 if (evt.detail.parameters[key] !== '') {
