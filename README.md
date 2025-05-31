@@ -11,7 +11,7 @@ This extension uses request parameters to replace existing parameters. If given 
 Example current page is on `/product?page=2&search=meatball`. Then this would return `/product?page=3&search=meatball`.
 
 ```html
-<div hx-ext="path-params">
+<div hx-ext="replace-params">
   <a hx-get="/product?page=2&search=meatball" hx-vals='{"page": "3"}'>Next</a>
 </div>
 ```
@@ -19,7 +19,7 @@ Example current page is on `/product?page=2&search=meatball`. Then this would re
 Another example if current page is on `/product?page=2&search=meatball`. Then this would return `/product?page=2&search=friedchicken`
 
 ```html
-<form hx-ext="path-params" hx-get="/product?page=2&search=meatball">
+<form hx-ext="replace-params" hx-get="/product?page=2&search=meatball">
   <input value="friedchicken" name="search" />
   <button>Search</button>
 </form>
